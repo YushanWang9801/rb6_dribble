@@ -1,20 +1,29 @@
 import * as THREE from 'three';
+import gsap from "gsap";
+import "../index.css";
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 const FILEPATH = 'rb6.glb';
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+};
+
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x111111);
-const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+const camera = new THREE.PerspectiveCamera( 45, sizes.width/sizes.height, 1, 1000 );
 camera.rotation.y = 45/180*Math.PI;
 camera.position.x = 20;
 camera.position.y = 20;
 camera.position.z = 30;
 
+
 const canvas = document.querySelector(".webcanvas");
 const renderer = new THREE.WebGLRenderer({canvas});
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(sizes.width, sizes.height);
+renderer.setPixelRatio(2);
 
 const lightxz = new THREE.PointLight(0xffffff, 0.8);
 lightxz.position.copy(camera.position);
@@ -49,7 +58,7 @@ assetLoader.load(FILEPATH, function ( gltf ) {
     model.position.z += 3;
     model.rotation.x = Math.PI/2-0.05 ;
     model.rotation.y = 0;
-    model.rotation.z -= Math.PI/2+0.05 ;
+    model.rotation.z -= Math.PI/2;
 } ,
     undefined,
     (error) => {
@@ -57,12 +66,12 @@ assetLoader.load(FILEPATH, function ( gltf ) {
     }
 );
 
-const planeGemometry = new THREE.PlaneGeometry(60, 15);
+const planeGemometry = new THREE.PlaneGeometry(400, 12);
 const planeMaterial  = new THREE.MeshStandardMaterial({color: 0xC6C6C6, side: THREE.DoubleSide});
 const plane = new THREE.Mesh(planeGemometry, planeMaterial);
 plane.rotation.x = Math.PI/2-0.05;
-plane.position.x += 15;
-plane.position.z += 1;
+plane.position.z += 3;
+plane.position.y += 0.5;
 plane.receiveShadow = true;
 scene.add(plane);
 
@@ -72,6 +81,13 @@ scene.add(plane);
 // scene.add(gridHelper);
 
 let control = new OrbitControls(camera, canvas);
+control.enableDamping = true;
+control.enablePan = false;
+control.enableZoom = false;
+control.autoRotate = true;
+// control.autoRotate = false;
+control.autoRotateSpeed = 1;
+
 const clock = new THREE.Clock();
 const loop = () => {
     lightxz.position.x = 5 + 50 * Math.sin(Date.now() / 480);
@@ -105,3 +121,15 @@ loop();
 // for (var i = 0; i < textures.length; i++) {
 //   materials[i] = new THREE.MeshStandardMaterial({ map: textures[i] });
 // }
+
+window.addEventListener('resize', () => {
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
+    camera.aspect = sizes.width/ sizes.height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(sizes.width, sizes.height);
+})
+
+const t1 = gsap.timeline({defaults: {duration: 1}});
+t1.fromTo(model.scale, {z:0, x:0, y:0}, {z:1, x:1, y:1});
+t1.fromTo(plane.scale, {z:0, x:0, y:0}, {z:1, x:1, y:1});

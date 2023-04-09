@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Optima;
+    src: url("./OPTIMA.TTF");
+}
+
+.webcanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    gap: 4rem;
+    font-size: 1rem;
+}
+
+nav ul span {
+    background: blue;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+.title {
+    color: #fff;
+    z-index: 2;
+    position: absolute;
+    font-size: 5rem;
+    opacity: 0.8;
+    left: 50%;
+    top: 50%;
+    text-transform: uppercase;
+    transform: translate(-50%, -25%);
+}
