@@ -20,7 +20,7 @@ body,html {
 }
 
 nav {
-    color: #fff;
+    color: #C0BFBF;
     z-index: 2;
     position: relative;
     padding: 4rem 8rem;
@@ -28,23 +28,37 @@ nav {
     justify-content: space-between;
 }
 
+nav #yushan {
+    color: #00a19c;
+}
+
+nav .redbull-icon {
+    width: 6rem;
+    height: 8rem;
+    margin-top: -3.2rem;
+    /* border: 2px solid yellow; */
+}
+
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #C0BFBF;
 }
 
 nav ul {
     list-style: none;
     text-transform: uppercase;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     font-size: 1rem;
 }
 
 nav ul span {
-    background: blue;
+    background: #E21B4D;
     padding: 10px 25px;
     border-radius: 30px;
+    font-weight: bold;
+    color: #FFF;
+    font-family: "Courier New";
 }
 
 .title {
@@ -57,4 +71,11 @@ nav ul span {
     top: 50%;
     text-transform: uppercase;
     transform: translate(-50%, -25%);
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
