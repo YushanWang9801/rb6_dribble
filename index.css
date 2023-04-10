@@ -81,22 +81,22 @@ nav ul span {
 .videobar {
     display: flex;
     position: absolute;
-    left: 6rem;
+    left: 4rem;
     bottom: 4rem;
     z-index: 1;
 }
 
 iframe {
-    width: 320px;
-    height: 180px;
+    width: 17.6rem;
+    height: 9.9rem;
     box-shadow: 5px 5px 10px darkred;
 }
 
 .intro {
     background: #E21B4D;
     color: #fff;
-    width: 320px;
-    height: 180px;
+    width: 17.6rem;
+    height: 9.9rem;
 
     display: flex;
     flex-direction: column;
@@ -114,9 +114,9 @@ iframe {
 
 .rb6-intro {
     background: #fff;
-    width: 600px;
-    height: 140px;
-    margin-top: 20px;
+    width: 30rem;
+    height: 7.8rem;
+    margin-top: 1rem;
     z-index: 0;
     box-shadow: 5px 5px 10px darkred;
 
@@ -132,16 +132,19 @@ iframe {
 }
 
 .rb6-intro h2{
-    font-size: 1.0rem;
+    font-size: 0.8rem;
     font-family: "Courier New";
 }
 
 .short {
-    position: relative;
-    margin-left: 8rem;
+    position: absolute;
+    right: 5rem;
+    bottom: 4rem;
+    z-index: 1;
+
     
-    width: 500px;
-    height: 140px;
+    width: 30rem;
+    height: 8.8rem;
     font-size: 1.2rem;
     color: #FFF;
     
