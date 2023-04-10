@@ -3,13 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-body,html {
-    overflow: hidden;
-}
 
 @font-face {
     font-family: Optima;
     src: url("./OPTIMA.TTF");
+}
+
+body,
+html {
+    overflow: hidden;
+    font-family: Optima, sans-serif;
 }
 
 .webcanvas {
@@ -42,6 +45,7 @@ nav .redbull-icon {
 nav a {
     text-decoration: none;
     color: #C0BFBF;
+    font-weight: bold;
 }
 
 nav ul {
@@ -50,6 +54,7 @@ nav ul {
     display: flex;
     gap: 2rem;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 nav ul span {
@@ -73,9 +78,79 @@ nav ul span {
     transform: translate(-50%, -25%);
 }
 
-iframe {
+.videobar {
+    display: flex;
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 6rem;
+    bottom: 4rem;
+    z-index: 1;
+}
+
+iframe {
+    width: 320px;
+    height: 180px;
+    box-shadow: 5px 5px 10px darkred;
+}
+
+.intro {
+    background: #E21B4D;
+    color: #fff;
+    width: 320px;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Optima, sans-serif;
+    line-height: 1.5;
+
+    box-shadow: 5px 5px 10px darkred;
+}
+
+.intro h2 h3 {
+    text-align: left;
+}
+
+.rb6-intro {
+    background: #fff;
+    width: 600px;
+    height: 140px;
+    margin-top: 20px;
     z-index: 0;
+    box-shadow: 5px 5px 10px darkred;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.rb6-intro h1{
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    font-family: Optima, sans-serif;
+}
+
+.rb6-intro h2{
+    font-size: 1.0rem;
+    font-family: "Courier New";
+}
+
+.short {
+    position: relative;
+    margin-left: 8rem;
+    
+    width: 500px;
+    height: 140px;
+    font-size: 1.2rem;
+    color: #FFF;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+#adrian {
+    text-align: right;
 }
