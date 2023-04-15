@@ -84,7 +84,7 @@ let control = new OrbitControls(camera, canvas);
 control.enableDamping = true;
 control.enablePan = false;
 control.enableZoom = false;
-control.autoRotate = false;
+control.autoRotate = true;
 // control.autoRotate = false;
 control.autoRotateSpeed = 1;
 
