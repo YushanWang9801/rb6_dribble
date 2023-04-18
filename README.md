@@ -2,7 +2,7 @@ Create a Visual exploration | Redbull RB6 website header
 
 Using three.js
 
-![alt text](public/screenshot.png)
+![alt text](public/demo.gif)
 
 to run this project locally:
 
