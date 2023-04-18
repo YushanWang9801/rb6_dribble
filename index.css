@@ -33,6 +33,10 @@ nav {
 
 nav #yushan {
     color: #00a19c;
+    font-family: Optima, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
 
 nav .redbull-icon {
