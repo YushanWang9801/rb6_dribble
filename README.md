@@ -7,6 +7,7 @@ Using three.js
 to run this project locally:
 
 ```
+
 npm install three gsap
 
 npm run dev
