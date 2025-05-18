@@ -1,163 +1,168 @@
+/* Reset basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
-@font-face {
+  @font-face {
     font-family: Optima;
     src: url("./OPTIMA.TTF");
-}
-
-body,
-html {
-    overflow: hidden;
-    font-family: Optima, sans-serif;
-}
-
-.webcanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-nav {
-    color: #C0BFBF;
-    z-index: 2;
-    position: relative;
-    padding: 4rem 8rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav #yushan {
-    color: #00a19c;
-    font-family: Optima, sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-nav .redbull-icon {
-    width: 6rem;
-    height: 8rem;
-    margin-top: -3.2rem;
-    /* border: 2px solid yellow; */
-}
-
-nav a {
-    text-decoration: none;
-    color: #C0BFBF;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    text-transform: uppercase;
-    display: flex;
-    gap: 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-nav ul span {
-    background: #E21B4D;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    color: #FFF;
-    font-family: "Courier New";
-}
-
-.title {
-    color: #fff;
-    z-index: 2;
-    position: absolute;
-    font-size: 5rem;
-    opacity: 0.8;
-    left: 50%;
-    top: 50%;
-    text-transform: uppercase;
-    transform: translate(-50%, -25%);
-}
-
-.videobar {
-    display: flex;
-    position: absolute;
-    left: 4rem;
-    bottom: 4rem;
-    z-index: 2;
-}
-
-iframe {
-    width: 17.6rem;
-    height: 9.9rem;
-    box-shadow: 5px 5px 10px darkred;
-}
-
-.intro {
-    background: #E21B4D;
-    color: #fff;
-    width: 17.6rem;
-    height: 9.9rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
+  
+  .webcanvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    touch-action: none; /* 防止双指滑动缩放页面 */
+  }
+  
+  body {
     font-family: Optima, sans-serif;
     line-height: 1.5;
-
-    box-shadow: 5px 5px 10px darkred;
-}
-
-.intro h2 h3 {
-    text-align: left;
-}
-
-.rb6-intro {
-    background: #fff;
-    width: 30rem;
-    height: 7.8rem;
-    margin-top: 1rem;
-    z-index: 0;
-    box-shadow: 5px 5px 10px darkred;
-
+    background-color: black;
+    color: #00a19c;
+  }
+  
+  /* Navigation bar */
+  .header {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    padding: 1.5rem;
-}
-
-.rb6-intro h1{
+    background-color: black;
+    color: #00a19c;
+    padding: 10px 20px;
+  }
+  
+  .logo-link {
+    text-decoration: none;
+    color: #00a19c;
+  }
+  
+  #yushan {
     font-size: 1.5rem;
-    padding-top: 0.5rem;
-    font-family: Optima, sans-serif;
-}
-
-.rb6-intro h2{
-    font-size: 0.8rem;
-    font-family: "Courier New";
-}
-
-.short {
-    position: absolute;
-    right: 5rem;
-    bottom: 4rem;
-    z-index: 1;
-
-    
-    width: 30rem;
-    height: 8.8rem;
-    font-size: 1.2rem;
-    color: #FFF;
-    
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .redbull-icon {
+    height: 50px;
+    width: auto;
+  }
+  
+  .newsletter {
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #d32f2f;
+  }
+  
+  /* Canvas */
+  .webcanvas {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 300px;
+    background-color: #000;
+  }
+  
+  /* Video section (optional) */
+  .videobar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .videobar iframe {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .intro, .rb6-intro {
+    text-align: center;
+  }
+  
+  .rb6-intro {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    text-align: left;
-}
-
-#adrian {
-    text-align: right;
-}
+  }
+  
+  /* Quotes section (optional) */
+  .short {
+    margin: 20px 0;
+    text-align: center;
+    font-style: italic;
+    color: #444;
+  }
+  
+  #adrian {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Responsive behavior */
+  @media screen and (min-width: 768px) {
+    .header {
+      flex-wrap: nowrap;
+    }
+  
+    .nav-links {
+      gap: 20px;
+    }
+  
+    .rb6-intro {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .videobar iframe {
+      height: 400px;
+    }
+  
+    .title {
+      font-size: 3rem;
+    }
+  
+    .webcanvas {
+      height: 500px;
+    }
+  }
+  
+  .canvas-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #00a19c;
+    text-shadow: 2px 2px 5px black;
+    font-family: Optima, sans-serif;
+    z-index: 5; /* 要高于 canvas */
+    pointer-events: none; /* 保证不影响鼠标操作 */
+  }
