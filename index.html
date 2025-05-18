@@ -3,41 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.css">
     <title>Redbull Racing Header</title>
   </head>
   <body>
     <nav class="header">
-      <a href="https://yushanwang9801.github.io/" class="logo-link">
-        <h1 id="yushan">YushanWang9801</h1>
-      </a>
-      <ul class="nav-links">
-        <li><img class="redbull-icon" src="icon1.png" alt="Red Bull Racing logo" /></li>
+      <a href="https://yushanwang9801.github.io/"><h1 id="yushan">YushanWang9801</h1></a>
+      <ul>
+        <li>Drivers</li> 
+        <li>Mechanics</li> 
+        <li>Races</li> 
+        <li><img class="redbull-icon" src="icon1.png" alt="redbull racing logo"></li>
+        <li>Story</li>
+        <li>Team</li>
+        <li>Designer</li>
+      </ul>
+      <ul>
+        <li><span>Newsletter</span></li>
+        <!-- <li><span>Search</span></li> -->
+        <!-- <li><span>Join</span></li> -->
       </ul>
     </nav>
-
-    <main>
-      <canvas class="webcanvas"></canvas>
-    </main>    
-
-    <section class="videobar">
+    <h1 class="title">Red Bull RB6</h1>
+    <canvas class="webcanvas"></canvas>
+    <div class="videobar">
       <iframe 
-        src="https://www.youtube.com/embed/-t6cxIeCIjE" 
-        frameborder="0" allowfullscreen></iframe>
-      <div class="rb6-intro">
-        <div><h2>CTO</h2><h1>Adrian Newey</h1></div>
-        <div><h2>Driver</h2><h1>Sebastian Vettel</h1></div>
-        <div><h2>Power</h2><h1>18,000 rpm</h1></div>
+            src="https://www.youtube.com/embed/-t6cxIeCIjE" 
+            frameborder="0" allowfullscreen></iframe>
+      <div class="intro">      
+        <h3>The Rhythm of the Factory - RB9</h3>
+        <h3>Presented by </h3>
+        <h3>Oracle Red Bull Racing</h3>
       </div>
-    </section>
-
-    <section class="short">
-      <span>RB6 set the fastest time in 15 out of the 19 rounds in Qualifying.</span>
-      <br>
-      <span>"Probably the car with the most downforce in the history of F1"</span>
+      <div class="rb6-intro">
+          <div>
+            <h2>CTO</h2>
+            <h1>Adrian Newey</h1>
+          </div>
+          <div>
+            <h2>Driver</h2>
+            <h1>Sebestian Vettel</h1>
+          </div>
+          <div>
+            <h2>Power</h2>
+            <h1>18,000 rpm</h1>
+          </div>
+      </div>
+    </div>
+    <div class="short">
+      <span> RB6 set the fastest time in 15 out of the 19 rounds in Qualifying.</span>
+      <span>"probably the car with the most downforce in the history of F1"</span>
       <span id="adrian">-- Adrian Newey</span>
-    </section>
-
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
