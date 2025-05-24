@@ -41,8 +41,12 @@
   }
   
   #yushan {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: Optima, "Comic Sans MS", "Comic Sans", cursive, 
+                    Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding-left: 3vw;
   }
   
   .nav-links {
